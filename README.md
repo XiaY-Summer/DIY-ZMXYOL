@@ -12,10 +12,9 @@
 python -m pip install --upgrade pip
 pip3 install Pillow
 ````
-接着配置config.ini和config-data.ini(下面有配置方法，原文件为哪吒刷暴章模板)
+接着配置config.ini和config-data.ini(下文有配置方法，原文件为哪吒刷暴章模板)
 
-最后手机打开 USB调试 和 USB调试(安全设置)
-## 打开方法
+最后手机打开 USB调试 和 USB调试(安全设置),打开方法见下文
 
 造梦西游ol进入需要肝的关卡
 
@@ -26,6 +25,12 @@ python get-color.py
 ````
 记住这四个数字,在config.ini里把最开头的四个数字替换掉
 
+设置其他键位位置
+[查看按键坐标方法](https://jingyan.baidu.com/article/00a07f38297bd082d028dce7.html)
+
+设置config-data.ini脚本(下文有配置方法，原文件为哪吒刷暴章模板)
+
+最后打开Main.exe
 
 ## Linux运行方法:
 
