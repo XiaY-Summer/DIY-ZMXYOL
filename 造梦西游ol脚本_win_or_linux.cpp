@@ -17,7 +17,7 @@ using namespace std;
 #endif
 
 #ifdef _WIN32
-	string bin = "bin/Windows/adb.exe";
+	string bin = "\"bin/Windows/adb.exe\"";
 #elif __linux__
 	string bin = "./bin/Linux/adb";
 #endif
