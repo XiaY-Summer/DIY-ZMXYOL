@@ -1,36 +1,36 @@
 ## Windows运行方法:
-下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
+1.下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
 
 密码:5iwp
 
-打开并安装,记得勾选最下面的Add Python 3.10 to PATH
+2.打开并安装,记得勾选最下面的Add Python 3.10 to PATH
  
-安装完成后按Win+r键，输入cmd回车
+3.安装完成后按Win+r键，输入cmd回车
 
 在cmd里输入
 ````bash
 python -m pip install --upgrade pip
 pip3 install Pillow
 ````
-接着配置config.ini和config-data.ini(下文有配置方法，原文件为哪吒刷暴章模板)
+4.配置config.ini和config-data.ini(下文有配置方法，原文件为哪吒刷暴章模板)
 
-最后手机打开 USB调试 和 USB调试(安全设置),打开方法见下文
+5.手机打开 USB调试 和 USB调试(安全设置),打开方法见下文
 
-造梦西游ol进入需要肝的关卡
+6.造梦西游ol进入需要肝的关卡
 
-cmd里输入
+7.cmd里输入
 ````bash
 cd '路径\DIY_zmxy'
 python get-color.py
 ````
 记住这四个数字,在config.ini里把最开头的四个数字替换掉
 
-设置其他键位位置
+8.设置其他键位位置
 [查看按键坐标方法](https://jingyan.baidu.com/article/00a07f38297bd082d028dce7.html)
 
-设置config-data.ini脚本(下文有配置方法，原文件为哪吒刷暴章模板)
+9.设置config-data.ini脚本(下文有配置方法，原文件为哪吒刷暴章模板)
 
-最后打开Main.exe
+10.最后打开Main.exe
 
 ## Linux运行方法:
 
