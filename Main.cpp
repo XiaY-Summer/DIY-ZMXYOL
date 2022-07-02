@@ -57,6 +57,12 @@ string get_color(string file_name, string game_color) {
 }
 
 int main() {
+#ifdef __linux__
+	system("mv config-data.ini config-data.ini.bak");
+	system("iconv -c -f GB2312 -t UTF-8 config-data.ini  > config-data.ini");
+	system("mv config.ini config.ini.bak");
+	system("iconv -c -f GB2312 -t UTF-8 config.ini  > config.ini");
+#endif
 	ifstream cfgin("config.ini");
 	string jn1, jn2, jn3, jn4, jn5, wushuang, fabao, menu, setting, restart, restart_sure, go_left, go_right, tiaoyue, data_color;
 	string config_in;
