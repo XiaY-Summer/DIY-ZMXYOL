@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #ifdef _WIN32
 #include <windows.h>
+#include <mmsystem.h>
+#pragma comment(lib,"winmm.lib")
 #elif __linux__
 #include <unistd.h>
 #endif
@@ -31,11 +33,11 @@ void run(string button, string time) {
 
 
 string get_color(string file_name, string game_color) {
-	#ifdef _WIN32
-		system("python get-color.py >game_color.data");
-	#elif __linux__
-		system("python3 get-color.py >game_color.data");
-	#endif
+#ifdef _WIN32
+	system("python get-color.py >game_color.data");
+#elif __linux__
+	system("python3 get-color.py >game_color.data");
+#endif
 	string color;
 	ifstream colorin(file_name, ios::in);
 	if (!colorin.is_open()) {
@@ -66,7 +68,7 @@ int main() {
 		system("iconv -c -f GB2312 -t UTF-8 config.ini.bak  > config.ini");
 		testin.close();
 		ofstream testout("Linux.data");
-		testout<<"Yes";
+		testout << "Yes";
 		testout.close();
 		system("rm -rf config-data.ini.bak");
 		system("rm -rf config.ini.bak");
@@ -176,6 +178,10 @@ int main() {
 				cout << "解决异常后后按任意键开始下一次循环\n";
 				system("read -n 1 echo");
 #elif _WIN32
+				PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+				system("cls");
+				cout << "游戏出现异常!\n";
+				cout << "解决异常后后按任意键开始下一次循环\n";
 				system("pause>nul");
 #endif
 				run(restart, "50");
