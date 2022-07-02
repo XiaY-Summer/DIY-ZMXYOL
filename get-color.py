@@ -6,6 +6,7 @@ import sys,platform
 
 if sys.platform == "linux" :
 	os.system("rm -rf zmxy.png")
+	os.system("chmod +x bin/Linux/adb")
 
 if sys.platform == "win32" :
 	os.system("bin\\Windows\\adb.exe shell /system/bin/screencap -p /sdcard/Download/zmxy.png")
