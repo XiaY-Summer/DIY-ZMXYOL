@@ -1,5 +1,5 @@
 ## Windows运行方法:
-1.下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
+1. 下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
 
 密码:5iwp
 
