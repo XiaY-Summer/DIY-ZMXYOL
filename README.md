@@ -20,7 +20,7 @@ pip3 install Pillow
 
 7. cmd里输入
 ````bash
-cd '路径\DIY-ZMXYOL'
+cd '解压路径'
 python get-color.py
 ````
 记住这四个数字,在config.ini里把最开头的四个数字替换掉
@@ -36,7 +36,7 @@ python get-color.py
 
 配置完环境后
 ````bash
-cd '路径\DIY-ZMXYOL'
+cd '解压路径'
 ````
 ````bash
 chmod +x Main
