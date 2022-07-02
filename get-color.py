@@ -21,6 +21,6 @@ img_src = img_src.convert('RGBA')
 
 src_strlist = img_src.load()
 
-data = src_strlist[2380,100]
+data = src_strlist[1000,100]
 
 print(data)
