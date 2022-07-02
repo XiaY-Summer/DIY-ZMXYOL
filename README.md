@@ -1,7 +1,24 @@
 ## Windows运行方法:
+下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
+  密码:5iwp
+ 打开并安装,记得勾选最下面的Add Python 3.10 to PATH
+安装完成后按Win+r键，输入cmd回车
+在cmd里输入
 ````bash
-配置完成后，直接打开Main.exe
+python -m pip install --upgrade pip
+pip3 install Pillow
 ````
+接着配置config.ini和config-data.ini(下面有配置方法，原文件为哪吒刷暴章模板)
+最后手机打开 USB调试 和 USB调试(安全设置)
+造梦西游ol进入需要肝的关卡
+cmd里输入
+````bash
+cd '路径\DIY_zmxy'
+python get-color.py
+````
+记住这四个数字,在config.ini里把最开头的四个数字替换掉
+
+
 ## Linux运行方法:
 
 配置完环境后
@@ -17,8 +34,7 @@ g++ 造梦西游ol脚本_win_orlinux.cpp
 
 
 # Windows环境要求: python3
-# Linux环境要求: sox python3 g++
-
+# Linux环境要求: sox python3
 ### sox安装方法:
 Debain系:
 ````bash
