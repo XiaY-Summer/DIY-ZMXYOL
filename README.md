@@ -81,7 +81,7 @@ pip3 install Pillow
 |地图颜色| 进地图后用 get-color.py 获取(用于确认关卡进入是否成功) |
 |结束读取| 无参数(不加无法运行) |
 
-# config_data.ini文件说明(原config-data.ini为哪吒刷暴章模板模板)
+# config_data.ini文件说明(原config-data.ini为哪吒刷暴章模板)
 
 ## 用途:设置地图内打怪脚本
 
