@@ -46,7 +46,7 @@ python get-color.py
 
 ## Linux运行方法:
 
-配置完环境后        不会配置？那你用什么Linux,赶紧回Windows
+配置完环境后
 ````bash
 cd '解压路径'
 ````
@@ -56,7 +56,7 @@ chmod +x Main
 ````bash
 ./Main
 ````
-
+不会配置环境？那你用什么Linux,赶紧回Windows
 # python库需求: Pillow
 
 ### 安装方法:
