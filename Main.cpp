@@ -170,7 +170,7 @@ int main() {
 			//	string back_color = get_color("game_color.data","85 102 255 255");
 			string back_color = get_color("game_color.data", data_color);
 			wait_times += 1;
-			if (wait_times > 3) {
+			if (wait_times > 4) {
 #ifdef __linux__
 				system("play error.wav");
 				system("clear");
