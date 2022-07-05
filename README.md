@@ -1,3 +1,15 @@
+# Windows环境要求: python3
+# Linux环境要求: sox python3
+### sox安装方法:
+Debain系:
+````bash
+sudo apt install sox
+````
+Arch系:
+````bash
+sudo pacman -S sox
+````
+
 ## Windows运行方法:
 1. 下载 [Python](https://wws.lanzouy.com/iEvk807a8dti)
 
@@ -44,20 +56,6 @@ chmod +x Main
 ````bash
 ./Main
 ````
-
-
-# Windows环境要求: python3
-# Linux环境要求: sox python3
-### sox安装方法:
-Debain系:
-````bash
-sudo apt install sox
-````
-Arch系:
-````bash
-sudo pacman -S sox
-````
-
 
 # python库需求: Pillow
 
