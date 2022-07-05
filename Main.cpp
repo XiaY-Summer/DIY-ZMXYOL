@@ -178,7 +178,7 @@ int main() {
 				cout << "解决异常后后按任意键开始下一次循环\n";
 				system("read -n 1 echo");
 #elif _WIN32
-				PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+				PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
 				system("cls");
 				cout << "游戏出现异常!\n";
 				cout << "解决异常后后按任意键开始下一次循环\n";
