@@ -1,4 +1,5 @@
 # Windows环境要求: python3
+# macOS环境要求: python3(macOS12自带)
 # Linux环境要求: sox python3
 ### sox安装方法:
 Debain系:
@@ -44,6 +45,18 @@ python get-color.py
 
 10. 最后打开Main.exe
 
+## macOS运行方法:
+在终端里输入
+````bash
+python3 -m pip install --upgrade pip
+pip3 install Pillow
+````
+其他的参考Windows的方法，记得先运行一下Main文件，会完成一次配置文件编码转换
+运行方法
+````bash
+chmod +x Main
+./Main
+````
 ## Linux运行方法:
 
 配置完环境后
@@ -51,10 +64,10 @@ python get-color.py
 cd '解压路径'
 ````
 ````bash
-chmod +x Main
+g++ Main.cpp
 ````
 ````bash
-./Main
+./a.out
 ````
 不会配置环境？那你用什么Linux,赶紧回Windows
 # python库需求: Pillow
