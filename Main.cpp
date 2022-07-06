@@ -9,10 +9,16 @@
 #pragma comment(lib,"winmm.lib")
 #elif __linux__
 #include <unistd.h>
+#elif __APPLE__
+#include <unistd.h>
 #endif
 using namespace std;
 
 #ifdef __linux__
+void Sleep(int sleep_time) {
+	usleep(sleep_time * 1000);
+}
+#elif __APPLE__
 void Sleep(int sleep_time) {
 	usleep(sleep_time * 1000);
 }
@@ -22,6 +28,8 @@ void Sleep(int sleep_time) {
 string bin = "bin\\Windows\\adb.exe";
 #elif __linux__
 string bin = "./bin/Linux/adb";
+#elif __APPLE__
+string bin = "./bin/macOS/adb";
 #endif
 
 void run(string button, string time) {
@@ -36,6 +44,8 @@ string get_color(string file_name, string game_color) {
 #ifdef _WIN32
 	system("python get-color.py >game_color.data");
 #elif __linux__
+	system("python3 get-color.py >game_color.data");
+#elif __APPLE__
 	system("python3 get-color.py >game_color.data");
 #endif
 	string color;
@@ -68,6 +78,22 @@ int main() {
 		system("iconv -c -f GB2312 -t UTF-8 config.ini.bak  > config.ini");
 		testin.close();
 		ofstream testout("Linux.data");
+		testout << "Yes";
+		testout.close();
+		system("rm -rf config-data.ini.bak");
+		system("rm -rf config.ini.bak");
+	}
+	else testin.close();
+
+#elif __APPLE__
+	ifstream testin("Unix.data");
+	if (!testin.is_open()) {
+		system("mv config-data.ini config-data.ini.bak");
+		system("iconv -c -f GB2312 -t UTF-8 config-data.ini.bak  > config-data.ini");
+		system("mv config.ini config.ini.bak");
+		system("iconv -c -f GB2312 -t UTF-8 config.ini.bak  > config.ini");
+		testin.close();
+		ofstream testout("Unix.data");
 		testout << "Yes";
 		testout.close();
 		system("rm -rf config-data.ini.bak");
@@ -179,6 +205,14 @@ int main() {
 				while(true){
 					if(get_color("game_color.data", data_color) == "yes") break;
 				}
+#elif __APPLE__
+				system("afplay error.wav");
+				system("clear");
+				cout << "游戏出现异常!\n";
+				cout << "解决异常后重新开始游戏，即可继续脚本\n";
+				while(true){
+					if(get_color("game_color.data", data_color) == "yes") break;
+				}			
 #elif _WIN32
 				PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
 				system("cls");
@@ -386,6 +420,8 @@ int main() {
 #ifdef _WIN32
 				system("del for.data");
 #elif __linux__
+				system("rm -rf for.data");
+#elif __APPLE__
 				system("rm -rf for.data");
 #endif
 				cout << "\n循环结束\n";
