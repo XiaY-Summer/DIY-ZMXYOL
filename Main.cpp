@@ -175,18 +175,20 @@ int main() {
 				system("play error.wav");
 				system("clear");
 				cout << "游戏出现异常!\n";
-				cout << "解决异常后后按任意键开始下一次循环\n";
-				system("read -n 1 echo");
+				cout << "解决异常后重新开始游戏，即可继续脚本\n";
+				while(true){
+					if(get_color("game_color.data", data_color) == "yes") break;
+				}
 #elif _WIN32
 				PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
 				system("cls");
 				cout << "游戏出现异常!\n";
-				cout << "解决异常后后按任意键开始下一次循环\n";
-				system("pause>nul");
+				cout << "解决异常后重新开始游戏，即可继续脚本\n";
+				while(true){
+					if(get_color("game_color.data", data_color) == "yes") break;
+				}
+
 #endif
-				run(restart, "50");
-				Sleep(100);
-				run(restart_sure, "50");
 				wait_times = 0;
 				continue;
 			}
