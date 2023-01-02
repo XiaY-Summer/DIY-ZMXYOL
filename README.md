@@ -1,4 +1,4 @@
-#本项目已废弃，垃圾游戏
+# 本项目已废弃，垃圾游戏
 
 # Windows环境要求: python3
 # macOS环境要求: python3(macOS12自带)
